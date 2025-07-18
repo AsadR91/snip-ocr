@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "Local Snip OCR",
+    "version": "1.0",
+    "description": "Snip a region and extract text using your local OCR server.",
+    "permissions": ["scripting", "activeTab", "clipboardWrite"],
+    "host_permissions": ["<all_urls>"],
+    "background": {
+      "service_worker": "js/background.js"
+    },
+    "web_accessible_resources": [
+     {
+       "resources": ["js/snip.js"],
+       "matches": ["<all_urls>"]
+     }
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
